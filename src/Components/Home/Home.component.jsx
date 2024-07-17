@@ -50,13 +50,13 @@ function Home() {
 
           <div className="row mt-4">
             <div className="col-sm-4">
-              <h4>1,000</h4>
+              <h4>1,000+</h4>
               <hr />
               <h5>Students</h5>
             </div>
 
             <div className="col-sm-4">
-              <h4>300</h4>
+              <h4>300+</h4>
               <hr />
               <h5>Faculty Members</h5>
             </div>
