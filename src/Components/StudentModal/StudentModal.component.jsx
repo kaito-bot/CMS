@@ -1,5 +1,5 @@
-import AddDataForm from "../AddDataform/AddDataForm";
 
+import StudentDataForm from "../StudentDataForm/StudentDataForm";
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
@@ -17,16 +17,16 @@ function StudentModalComponent(args) {
       <Modal isOpen={modal} toggle={toggle} {...args}>
         <ModalHeader toggle={toggle}>Modal title</ModalHeader>
         <ModalBody>
-          <AddDataForm/>
+          <StudentDataForm toggle = {toggle}/>
           </ModalBody>
-        <ModalFooter>
+        {/* <ModalFooter>
           <Button color="primary" onClick={toggle}>
             Do Something
           </Button>{' '}
           <Button color="secondary" onClick={toggle}>
             Cancel
           </Button>
-        </ModalFooter>
+        </ModalFooter> */}
       </Modal>
     </div>
   );
