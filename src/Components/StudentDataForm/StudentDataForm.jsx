@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Form,FormGroup, Label,Input } from 'reactstrap';
 import "./studentdataform.css";
-const StudentDataForm = ({toggle}) => {
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const StudentDataForm = () => {
     const [student, setStudent] = useState({
         studentId: '',
         firstName: '',
@@ -15,6 +18,8 @@ const StudentDataForm = ({toggle}) => {
         student_status: ''
     });
 
+    const [success, setSuccess] = useState(false);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setStudent({
@@ -22,10 +27,11 @@ const StudentDataForm = ({toggle}) => {
             [name]: value
         });
     };
-
+    const notifySuccess = () => toast.success("Record Added Successfully !");
+    const notifyFailure = ()  => toast.error("Couldn't save the record. Try again later") ;
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent default form submission
-        toggle();
+       
         // Make a POST request with Axios
         axios.post('http://localhost:8081/list/student', student)
             .then(response => {
@@ -42,10 +48,13 @@ const StudentDataForm = ({toggle}) => {
                     graduation_year: '',
                     student_status: ''
                 });
-                ;
+                notifySuccess();
+               
+
             })
             .catch(error => {
                 console.error('There was an error saving the student data!', error);
+                notifyFailure();
                 // Handle error (e.g., show an error message)
             });
     };
@@ -120,6 +129,7 @@ const StudentDataForm = ({toggle}) => {
             </FormGroup>
             
             <button type="submit">Save Student</button>
+            <ToastContainer className="tcontainer" />
         </Form>
     );
 };

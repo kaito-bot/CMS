@@ -35,7 +35,6 @@ const EmployeePaginationComponent = ({employeeData}) => {
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
-                        <th>Phone Number</th>
                         <th>Department</th>
                         <th>position</th>
                         <th>salary</th>
@@ -49,7 +48,6 @@ const EmployeePaginationComponent = ({employeeData}) => {
                             <td>{employee.first_name}</td>
                             <td>{employee.last_name}</td>
                             <td>{employee.email}</td>
-                            <td>{employee.phone_number}</td>
                             <td>{employee.department}</td>
                             <td>{employee.position}</td>
                             <td>{employee.salary}</td>
