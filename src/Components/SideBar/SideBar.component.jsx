@@ -1,11 +1,9 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import PaginationComponent from "../Pagination/pagination";
 import Student from "../Student/Student";
 import Employee from "../Employee/Employee";
 import "./SideBar.css";
-import Modal from '../StudentModal/StudentModal.component';
-import StudentModalComponent from '../StudentModal/StudentModal.component';
+import ModalComponent from '../StudentModal/ModalComponent';
 import RecordCount from '../RecordCount/RecordCount';
 
 function SideBar() {
@@ -28,7 +26,8 @@ function SideBar() {
                     </li>
 
                     <li>
-                        <StudentModalComponent/>
+                        <ModalComponent/>
+
                     </li>
                 </ul>
             </div>
