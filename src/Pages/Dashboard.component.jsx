@@ -4,7 +4,8 @@ function Dashboard() {
     return ( 
         <div >
            
-            <SideBar/></div>
+            <SideBar/>
+            </div>
        
      );
 }
