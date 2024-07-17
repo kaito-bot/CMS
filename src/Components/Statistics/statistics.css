@@ -1,0 +1,59 @@
+.Statistics{
+padding: 0px 50px;
+}
+
+
+.Stats-cards{
+    display: flex;
+    align-items: flex-start;
+  
+}
+
+.Stats-cards .card{
+   min-width: 250px;
+   padding: 30px 100px 50px 80px;
+   margin-right: 30px;
+   border-radius: 40px 0px 30px 0px;
+   
+}
+
+.Stats-cards .card:first-child{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 6s ease infinite;}
+
+    .Stats-cards .card:nth-child(2){
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 600% 600%;
+        animation: gradientBG 10s ease infinite;}
+@keyframes gradientBG { 
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+    .Stats-cards .card:nth-child(3){
+        background: linear-gradient(-45deg,#23d5ab, #23a6d5, #e73c7e,#ee7752)  ;
+        background-size: 400% 400%;
+        animation: gradientBG 8s ease infinite;}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.cardtext{
+    font-size: 30px;
+}

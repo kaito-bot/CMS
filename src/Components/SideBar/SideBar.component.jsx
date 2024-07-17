@@ -5,6 +5,7 @@ import Student from "../Student/Student";
 import Employee from "../Employee/Employee";
 import "./SideBar.css";
 import ModalComponent from '../StudentModal/ModalComponent';
+import DashboardWelcome from '../DashboardWelcome/DashboardWelcome';
 
 function SideBar() {
     
@@ -13,7 +14,7 @@ function SideBar() {
         <div id="viewport">
             <div id="sidebar">
                 <header>
-                    <a href="#">My App</a>
+                    <a href="/">Dashboard</a>
                 </header>
                 <ul className="nav">
                     <li>
@@ -36,7 +37,7 @@ function SideBar() {
                
                 <div className="container-fluid">
                     <Routes>
-                        <Route path="/" element={<h1>Welcome to My App</h1>} />
+                        <Route path="/" element={<DashboardWelcome/>} />
                         <Route path="studentdetails" element={<Student/>} />
                         <Route path="employeedetails" element={<Employee />} />
                         

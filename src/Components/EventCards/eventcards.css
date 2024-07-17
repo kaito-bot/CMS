@@ -1,0 +1,33 @@
+.event-cards {
+    padding: 50px;
+}
+.events-title{
+    margin-top: 1rem;
+    
+}
+
+.dashboard-event-cards {
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+}
+
+.dashboard-event-cards .card{
+    
+    margin-top: 30px;
+    min-width: 320px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.dashboard-event-cards .card .card-body:nth-child(odd){
+background-color: palevioletred;
+
+}
+
+.dashboard-event-cards .card .card-body:nth-child(even){
+    background-color: rgb(25, 213, 213);
+    border-radius: 0px 0px 20px 20px;
+}
