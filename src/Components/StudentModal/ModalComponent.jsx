@@ -3,6 +3,7 @@ import StudentDataForm from "../StudentDataForm/StudentDataForm";
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import EmployeeDataForm from "../EmployeeDataForm/EmployeeDataForm";
+import './Modal.css';
 
 function ModalComponent(args) {
   const [modal, setModal] = useState(false);
@@ -11,16 +12,20 @@ function ModalComponent(args) {
 
   return (
     <div>
-      <Button color="danger" onClick={toggle}>
+
+        <button className="addnewrecord" onClick={toggle}>
         Add New Record
-      </Button>
+      </button>
+      
+     
+      
       
       <Modal isOpen={modal} toggle={toggle} {...args}>
         <ModalHeader toggle={toggle}>Add a Record</ModalHeader>
         <ModalBody>
-        <div>
-        <button onClick={() => setStudentForm(true)}>Add Student</button>
-        <button onClick={() => setStudentForm(false)}>Add Employee</button>
+        <div className="Modalbuttonwrapper">
+        <button className="Modalbutton" onClick={() => setStudentForm(true)}>Add Student</button>
+        <button className="Modalbutton" onClick={() => setStudentForm(false)}>Add Employee</button>
       </div>
           {isStudentForm? <StudentDataForm toggle = {toggle}/> : <EmployeeDataForm toggle={toggle}/>}
           </ModalBody>

@@ -82,6 +82,7 @@ body {
 }
 
 
+
 .record-counts {
   display: flex;
   justify-content: space-around;
@@ -103,4 +104,7 @@ body {
 .count-item p {
   font-size: 24px;
   font-weight: bold;
+
+.modalpadding{
+  padding: 5px;
 }
