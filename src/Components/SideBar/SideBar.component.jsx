@@ -1,15 +1,14 @@
 import React from 'react';
-import { Routes, Route, Link, useMatch } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import PaginationComponent from "../Pagination/pagination";
 import Student from "../Student/Student";
 import Employee from "../Employee/Employee";
 import "./SideBar.css";
 import Modal from '../StudentModal/StudentModal.component';
 import StudentModalComponent from '../StudentModal/StudentModal.component';
+import RecordCount from '../RecordCount/RecordCount';
 
 function SideBar() {
-    
-
     return (
         <div id="viewport">
             <div id="sidebar">
@@ -30,23 +29,19 @@ function SideBar() {
 
                     <li>
                         <StudentModalComponent/>
-
                     </li>
                 </ul>
             </div>
 
             <div id="content">
-               
                 <div className="container-fluid">
+                    
                     <Routes>
-                        <Route path="/" element={<h1>Welcome to My App</h1>} />
+                        <Route path="/" element={<h1>Record Details</h1>} />
                         <Route path="studentdetails" element={<Student/>} />
                         <Route path="employeedetails" element={<Employee />} />
-                        
-                      
-                        
                     </Routes>
-                    
+                    <RecordCount />
                 </div>
             </div>
         </div>
@@ -54,3 +49,4 @@ function SideBar() {
 }
 
 export default SideBar;
+

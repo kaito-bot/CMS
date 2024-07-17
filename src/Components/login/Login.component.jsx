@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
-import Dashboard from '../../Pages/Dashboard.component';
+import Home from '../Home/Home.component';
 
 
 const Login = () => {
@@ -15,7 +15,7 @@ const Login = () => {
     // Add your login logic here
     if (email === 'test@example.com' && password === 'password') {
       alert('Login successful!');
-      navigate('/dashboard/*');
+      navigate('/home');
     } else {
       setErrorMessage('Invalid User ID or password');
     }
