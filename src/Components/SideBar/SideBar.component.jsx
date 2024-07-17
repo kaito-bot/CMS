@@ -1,5 +1,6 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useMatch } from 'react-router-dom';
+
 import Student from "../Student/Student";
 import Employee from "../Employee/Employee";
 import "./SideBar.css";
@@ -25,11 +26,9 @@ function SideBar() {
                             <i className="zmdi zmdi-link"></i> Employee
                         </Link>
                     </li>
-
-                    <li>
-                        <ModalComponent/>
-
-                    </li>
+    <div className='modalpadding'> <ModalComponent/></div>
+                       
+                    
                 </ul>
             </div>
 
