@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Form,FormGroup, Label,Input } from 'reactstrap';
-import "./EmployeeDataForm.css"
+import "./EmployeeDataForm.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const EmployeeDataForm = ({toggle}) => {
     const [employee, setEmployee] = useState({
         staff_id: '',
@@ -13,7 +17,9 @@ const EmployeeDataForm = ({toggle}) => {
         position: '',
         salary: ''
     });
-
+    const notifySuccess = () => toast.success("Record Added Successfully !");
+    const notifyFailure = ()  => toast.error("Couldn't save the record. Try again later") ;
+    
     const handleChange = (e) => {
         const { name, value } = e.target;
         setEmployee({
@@ -40,10 +46,11 @@ const EmployeeDataForm = ({toggle}) => {
                     position: '',
                     salary: ''
                 });
-                toggle();
+                notifySuccess();
             })
             .catch(error => {
                 console.error('There was an error saving the employee data!', error);
+                notifyFailure();
                 // Handle error (e.g., show an error message)
             });
     };
@@ -97,6 +104,7 @@ const EmployeeDataForm = ({toggle}) => {
             </FormGroup>
             
             <button type="submit">Save Employee</button>
+            <ToastContainer className="tcontainer" />
         </Form>
     );
 };
